@@ -12,11 +12,11 @@ import {
 
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quotes(1, 'Bill','Gates','When a person becomes grateful to his sources, suddenly he becomes fearless and the light of abundance...', 38, 2, false, false, new Date(2019, 10, 24)),
-    new Quotes(1, 'Mark','Zuck','In life, you win some and you then lose some, that�s the way it has always been. However, there are a...', 1, 9, false, false, new Date(2019, 5, 6)),
-    new Quotes(1, 'larry','page','Most people make wishes but only a few of them make it work in real life. When life asks many difficult...', 39, 8, false, false, new Date(2019, 6, 17)),
-    new Quotes(1, 'bill','clinton',' No wise man ever wished to be younger.', 30, 2, false, false, new Date(2019, 4, 14)),
-    new Quotes(1, 'kip','nehemiah',' Every man desires to live long, but no man wishes to be old.', 116, 2, false, false, new Date(2019, 3, 10))
+    new Quotes(1, 'Bill','Gates','When a person becomes grateful to his sources, suddenly he becomes fearless and the light of abundance...', 0, 0, false, false, new Date(2019, 10, 24)),
+    new Quotes(1, 'Mark','Zuck','In life, you win some and you then lose some, that�s the way it has always been. However, there are a...', 0, 0, false, false, new Date(2019, 5, 6)),
+    new Quotes(1, 'larry','page','Most people make wishes but only a few of them make it work in real life. When life asks many difficult...', 0, 0, false, false, new Date(2019, 6, 17)),
+    new Quotes(1, 'bill','clinton',' No wise man ever wished to be younger.', 0, 0, false, false, new Date(2019, 4, 14)),
+    new Quotes(1, 'kip','nehemiah',' Every man desires to live long, but no man wishes to be old.', 0, 0, false, false, new Date(2019, 3, 10))
   ]
 
   @Input() quote: Quotes;
