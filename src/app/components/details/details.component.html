@@ -1,1 +1,9 @@
-<p>details works!</p>
+<div *ngIf="quote.submitDate|date" class="contributor">
+    contributed by {{quote.contributorName}} {{quote.submitDate|date}} days ago.
+  </div>
+  <div  *ngIf="!(quote.submitDate|date)"class="contributor">
+    contributed by {{quote.contributorName}} today.
+  </div>
+  
+    
+  
