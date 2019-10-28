@@ -70,7 +70,6 @@ main {
     }
   }
   
-  @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 h1 {
   font-size: calc(20px + 18vh);
@@ -151,7 +150,6 @@ body {
 }
 
 
-@import url(https://fonts.googleapis.com/css?family=Passion+One:900);
 
 .prismix {
 	margin: 20px auto;

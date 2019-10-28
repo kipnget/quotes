@@ -13,6 +13,7 @@ import { ColorRedDirective } from './directives/color-red.directive';
 import { HighlighterDirective } from './directives/highlighter.directive';
 import { DatePipe } from './pipes/date.pipe';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFontAwesomeModule,
     AlertModule.forRoot(),
   ],
