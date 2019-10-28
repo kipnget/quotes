@@ -1,0 +1,46 @@
+.form-control {
+    border: 1px solid;
+    -moz-box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.1);
+    -webkit-box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.1);
+    box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.1);
+  }
+  
+  .container {
+    width: 75%;
+  }
+  
+  .submit {
+    margin: 0;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    border-radius: 0;
+    font-size: 0.8em;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  
+  .btn {
+    color: whitesmoke;
+    width: 100%;
+  }
+  
+  .alert {
+    margin: 0 !important;
+    padding: 5px !important;
+  }
+  
+  .alert span {
+    padding-left: 5px !important;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .container {
+      width: 90%;
+    }
+  
+    .submit {
+      font-size: 0.5em;
+    }
+  }
+  

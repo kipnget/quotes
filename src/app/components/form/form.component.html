@@ -1,1 +1,42 @@
-<p>form works!</p>
+<form #quoteForm='ngForm' (ngSubmit)='quoteForm.form.valid && submitQuote(); quoteForm.reset()' class="container">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="contributorName"></label>
+        <input type="text" class="form-control" id="contributorName" [(ngModel)]="newQuote.contributorName"
+          #contributorName="ngModel" name="contributorName" required autocomplete="off" placeholder="Author name..">
+        <div *ngIf="contributorName.invalid && (contributorName.dirty || contributorName.touched)"
+          class="alert alert-danger">
+          <div *ngIf="contributorName.errors.required">
+            <span>Name is Required</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="characterName"></label>
+        <input type="text" class="form-control" id="characterName" [(ngModel)]="newQuote.characterName"
+          #characterName="ngModel" name="characterName" placeholder="Author of the quote.." required
+          autocomplete="off">
+        <div *ngIf="characterName.invalid && (characterName.dirty || characterName.touched)" class="alert alert-danger">
+          <div *ngIf="characterName.errors.required">
+            <span>Name is Required</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <label for="quote"></label>
+        <textarea cols="6" rows="4" class="form-control" placeholder="He/she said.." id="quote"
+          [(ngModel)]="newQuote.quote" #quote="ngModel" name="quote" required autocomplete="off"></textarea>
+        <div *ngIf="quote.invalid && (quote.dirty || quote.touched)" class="alert alert-danger">
+          <div *ngIf="characterName.errors.required">
+            <span>Please fill in a quote if you have one</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="submit">
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+  
