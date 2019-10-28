@@ -1,78 +1,77 @@
 main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  main figure {
-    position: relative;
-  }
-  
-  main .welcomeImage {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-  }
-  
-  .item1 {
-    grid-area: header;
-    font-size: 40px;
-  }
-  
-  main figcaption {
-    display: grid;
-    grid-template-areas:
-      'header';
-    align-items: center;
-    position: absolute;
-    width: 50%;
-    height: 25%;
-    top: 37.5%;
-    right: 25%;
-    background-color: white;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    color: #7a6d6a;
-    border: 3px solid #c3bcba;
-  }
-  
-  main figcaption h1 {
-    letter-spacing: 1px;
-    line-height: 60px;
-    font-size: 1.2rem;
-  }
-  
-  h4 {
-    font-size: 1.2rem;
-    text-align: center;
-    
-  
-  }
-  
-  @media only screen and (max-width: 845px) {
-    main figcaption h1 {
-      font-size: 1rem;
-      line-height: 10px;
-    }
-  }
-  
-  @media only screen and (max-width: 745px) {
-    main figcaption h1 {
-      font-size: 0.8rem;
-      line-height: 10px;
-      line-height: 30px;
-    }
-  
-    h4 {
-      font-size: 1.2em;
-    }
-  }
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
 
-h1 {
-  font-size: calc(20px + 18vh);
+main figure {
+  position: relative;
+}
+
+main .welcomeImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+main figcaption {
+  display: grid;
+  grid-template-areas:
+    'header';
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  top: 37.5%;
+  right: 25%;
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7a6d6a;
+  border: 3px solid #c3bcba;
+}
+
+main figcaption h1 {
+  letter-spacing: 1px;
+  line-height: 60px;
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+
+}
+
+@media only screen and (max-width: 845px) {
+  main figcaption h1 {
+    font-size: 1rem;
+    line-height: 10px;
+  }
+}
+
+@media only screen and (max-width: 745px) {
+  main figcaption h1 {
+    font-size: 0.8rem;
+    line-height: 10px;
+    line-height: 30px;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+#h1{
+  
+  font-size: 2.0em;
   line-height: calc(20px + 20vh);
 /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
     0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
@@ -149,135 +148,3 @@ body {
   }
 }
 
-
-
-.prismix {
-	margin: 20px auto;
-	width: 80%;
-	max-width: 1000px;
-	height: 200px;
-
-	background-image: url('https://4f01b72a6306fc2fac7bb346235d7e131c41e8ba.googledrive.com/host/0B3V4LxM9XSTzR2ZuSzdJN19RVzA/Portfolio/Animatext/images/horizon.png');
-	background-position: center center;
-	background-size: 1000px 200px;
-	border-radius: 10px;
-	overflow: hidden;
-    text-align: center;
-	vertical-align: middle;
-
-	box-shadow: 0 1px 0 1px rgba(0,0,0,0.2),
-			0 2px 5px rgba(0,0,0,0.5);
-
-}
-.prismix:before {
-	content: '';
-	display: inline-block;
-	height: 100%;
-	vertical-align: middle;
-}
-
-.RainbowPrism {
-	display: inline-block;
-	margin: 0;
-
-    color:  rgb(30, 15, 60);
-	font-family: 'Passion One';
-	font-size: 60px;
-	line-height: 60px;
-	min-width: 50px;
-	outline: none;
-	vertical-align: middle;
-    
-	animation: 10s RainbowPrism infinite linear;
-    text-shadow:
-		0px	-6px 6px rgba(255, 200, 200, 0.8),
-		-8px -4px 6px rgba(255, 255, 200, 0.9),
-		-8px 4px 6px rgba(200, 255, 200, 1.0),
-		0px 6px 6px rgba(200, 255, 255, 0.9),
-		8px 4px 6px rgba(200, 200, 255, 0.8),
-		8px -4px 6px rgba(255, 200, 255, 0.8),
-		-1px -1px 1px rgba(255, 255, 255, 0.7),
-		1px	1px	1px	rgba(50,	50,	50,	0.5);
-}
-
-
-@keyframes RainbowPrism {
-	0% {
-		text-shadow:
-0px	-6px	6px	rgba(255,	200,	200,	0.8),
--8px	-4px	6px	rgba(255,	255,	200,	0.9),
--8px	4px	6px	rgba(200,	255,	200,	1.0),
-0px	6px	6px	rgba(200,	255,	255,	0.9),
-8px	4px	6px	rgba(200,	200,	255,	0.8),
-8px	-4px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-	17% {
-		text-shadow:
-8px	-4px	6px	rgba(255,	200,	200,	0.8),
-0px	-6px	6px	rgba(255,	255,	200,	0.9),
--8px	-4px	6px	rgba(200,	255,	200,	1.0),
--8px	4px	6px	rgba(200,	255,	255,	0.9),
-0px	6px	6px	rgba(200,	200,	255,	0.8),
-8px	4px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-	34% {
-		text-shadow:
-8px	4px	6px	rgba(255,	200,	200,	0.8),
-8px	-4px	6px	rgba(255,	255,	200,	0.9),
-0px	-6px	6px	rgba(200,	255,	200,	1.0),
--8px	-4px	6px	rgba(200,	255,	255,	0.9),
--8px	4px	6px	rgba(200,	200,	255,	0.8),
-0px	6px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-
-			}
-	51% {
-		text-shadow:
-0px	6px	6px	rgba(255,	200,	200,	0.8),
-8px	4px	6px	rgba(255,	255,	200,	0.9),
-8px	-4px	6px	rgba(200,	255,	200,	1.0),
-0px	-6px	6px	rgba(200,	255,	255,	0.9),
--8px	-4px	6px	rgba(200,	200,	255,	0.8),
--8px	4px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-	68% {
-		text-shadow:
--8px	4px	6px	rgba(255,	200,	200,	0.8),
-0px	6px	6px	rgba(255,	255,	200,	0.9),
-8px	4px	6px	rgba(200,	255,	200,	1.0),
-8px	-4px	6px	rgba(200,	255,	255,	0.9),
-0px	-6px	6px	rgba(200,	200,	255,	0.8),
--8px	-4px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-	85% {
-		text-shadow:
--8px	-4px	6px	rgba(255,	200,	200,	0.8),
--8px	4px	6px	rgba(255,	255,	200,	0.9),
-0px	6px	6px	rgba(200,	255,	200,	1.0),
-8px	4px	6px	rgba(200,	255,	255,	0.9),
-8px	-4px	6px	rgba(200,	200,	255,	0.8),
-0px	-6px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-	100% {
-		text-shadow:
-0px	-6px	6px	rgba(255,	200,	200,	0.8),
--8px	-4px	6px	rgba(255,	255,	200,	0.9),
--8px	4px	6px	rgba(200,	255,	200,	1.0),
-0px	6px	6px	rgba(200,	255,	255,	0.9),
-8px	4px	6px	rgba(200,	200,	255,	0.8),
-8px	-4px	6px	rgba(255,	200,	255,	0.8),
--1px	-1px	1px	rgba(255,	255,	255,	0.7),
-1px	1px	1px	rgba(50,	50,	50,	0.5);
-			}
-}
