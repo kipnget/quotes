@@ -1,1 +1,47 @@
-<p>quote works!</p>
+<app-form (addQuote)="addNewQuote($event)"> </app-form>
+
+<div *ngFor="let name of quotes;let i = 'index'" class="container">
+  <div appHighlighter *ngIf="mostLikes(i) && name.likeNumber>0" class="quote-box">
+    <div class="quote-text">
+      <i class="fa fa-quote-left"></i>
+      <span id="quote">{{name.quote}} </span>
+      <i class="fa fa-quote-right"></i>
+    </div>
+    <div class="characterName">
+      -- <span id="author">{{name.characterName}}</span>
+    </div>
+    <div class="quote-buttons">
+        <button appColorRed *ngIf="!name.likeState && name.touchLike" (click)="onLike(i)" class="button" id="thumb-up-button" title="Thumbs Up"><i class="fa fa-thumbs-up"></i></button>
+        <button *ngIf="name.likeState || !name.touchLike" (click)="onLike(i)" class="button" id="thumb-up-button" title="Thumbs Up"><i class="fa fa-thumbs-up"></i></button>   
+        <button class="button">{{name.likeNumber}}</button>
+        <button  appColorRed *ngIf="!name.dislikeState && name.touchDislike"  (click)="onDislike(i)" class="button" id="thumb-down-button" title="Thumbs Down"><i class="fa fa-thumbs-down"></i></button>
+        <button *ngIf="name.dislikeState || !name.touchDislike" (click)="onDislike(i)" class="button" id="thumb-down-button" title="Thumbs Down"><i class="fa fa-thumbs-down"></i></button>
+        <button class
+        ="button">{{name.dislikeNumber}}</button>
+        <button class="button" id="see-contributor" (click)='showQuoteDetails(i)'>See contributor</button>
+        <button *ngIf="name.delButton" (click)="deleteMe(i)" class="button" id="delete" title="Delete"><i class="fa fa-trash"></i></button> 
+      </div>
+  </div>
+
+  <div *ngIf="!mostLikes(i) || name.likeNumber===0" class="quote-box">
+    <div class="quote-text">
+      <i class="fa fa-quote-left"></i>
+      <span id="quote">{{name.quote}} </span>
+      <i class="fa fa-quote-right"></i>
+    </div>
+    <div class="characterName">
+      -- <span id="author">{{name.characterName}}</span>
+    </div>
+    <div class="quote-buttons">
+      <button appColorRed *ngIf="!name.likeState && name.touchLike" (click)="onLike(i)" class="button" id="thumb-up-button" title="Thumbs Up"><i class="fa fa-thumbs-up"></i></button>
+      <button *ngIf="name.likeState || !name.touchLike" (click)="onLike(i)" class="button" id="thumb-up-button" title="Thumbs Up"><i class="fa fa-thumbs-up"></i></button>   
+      <button class="button">{{name.likeNumber}}</button>
+      <button  appColorRed *ngIf="!name.dislikeState && name.touchDislike"  (click)="onDislike(i)" class="button" id="thumb-down-button" title="Thumbs Down"><i class="fa fa-thumbs-down"></i></button>
+      <button *ngIf="name.dislikeState || !name.touchDislike" (click)="onDislike(i)" class="button" id="thumb-down-button" title="Thumbs Down"><i class="fa fa-thumbs-down"></i></button>
+      <button class="button">{{name.dislikeNumber}}</button>
+      <button class="button" id="see-contributor" (click)='showQuoteDetails(i)'>See contributor</button>
+      <button *ngIf="name.delButton" (click)="deleteMe(i)" class="button" id="delete" title="Delete"><i class="fa fa-trash"></i></button> 
+    </div>
+  </div>
+  <app-details *ngIf='name.showDetails' [quote]="name"></app-details>
+</div>
